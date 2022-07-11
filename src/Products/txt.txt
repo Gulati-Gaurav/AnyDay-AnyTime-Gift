@@ -1,0 +1,94 @@
+import React, { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+import "./Extra.css"
+function Extra() {
+    useEffect(() => {
+        
+        const panels = document.querySelectorAll('.card-panel')
+        
+        
+        function removeActiveClasses() {
+            panels.forEach(panel => {
+                panel.classList.remove('active')
+            })
+        }
+        removeActiveClasses();
+        const d=document.getElementById("img-card-sec").firstChild;
+        d.classList.add('active');
+
+    }, []);
+    function remclass()
+    {
+        const panels = document.querySelectorAll('.card-panel');
+        panels.forEach(panel => {
+            panel.classList.remove('active')
+        })
+        
+    }
+    const onclick=(e)=>{
+        remclass();
+        console.log(e);
+        e.target.classList.add('active');
+        console.log(e);
+    }
+    const location = useLocation();
+    console.log(location.state);
+    const ex = location.state.ex;
+    return (
+        <>
+            <div class="card-whole-section">
+      <div class="card-section-img">
+        <div class="card-container" id="img-card-sec">
+            {
+                ex.map((e)=>{
+                    return(
+                        <div className='card-panel active' style={{backgroundImage:`url(${e})`}} onClick={onclick}></div>
+                    )
+                })
+            }
+          
+        </div>
+        <div class="card-info-content">
+          <h1>Beautiful Photo Album - 12 pages</h1>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam maxime quis soluta illum vel placeat ipsa vitae animi sunt architecto!</p>
+          <h3>M.R.P. : <del> &#8377;{location.state.pr} </del> <span class="to-make-price-big"> &#8377;{location.state.pr*(0.9)} </span> <span class="to-make-red-attention small-text-discount">(-10%)</span></h3>
+          <p class="to-make-red-attention">Limited Stocks Hurry !!</p>
+          <button><h4>Add To Cart</h4></button>
+        </div>
+      </div>
+      <div class="checkout-more-stuff">
+        <h2>Checkout More Photo Albums</h2>
+        <div class="photos-row">
+          <div class="two-items-per-row">
+            <div class="checkout-more-stuff-content">
+              <img src="https://scontent.fdel52-1.fna.fbcdn.net/v/t39.30808-6/291076676_519360663315994_1282488236268711780_n.jpg?stp=dst-jpg_p720x720&_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_ohc=atvo0KefTgEAX9jo6t8&_nc_ht=scontent.fdel52-1.fna&oh=00_AT9vWpan87PfPjgxyoxA9iQVajlu2cBsDY5Jg6kH9vgJAg&oe=62C1A446" alt="ix"/>
+              <p>Beautiful Photo Album - 12 pages</p>
+            </div>
+            <div class="checkout-more-stuff-content">
+              <img src="https://scontent.fdel52-1.fna.fbcdn.net/v/t39.30808-6/290871973_519362566649137_6491197889553484337_n.jpg?stp=dst-jpg_p960x960&_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=Tyxe8nBOyQkAX9YsBw7&tn=uPSW4hL3OZM63uJ8&_nc_ht=scontent.fdel52-1.fna&oh=00_AT8UyIddQXMw8jV9kxS-z4u7qOljFOlWJvg7hq4mt8FfFg&oe=62C0FAFC" alt=""/>
+              <p>Family Photo Album - 10 pages</p>
+            </div>
+          </div>
+          <div class="two-items-per-row">
+            <div class="checkout-more-stuff-content">
+              <img src="https://scontent.fdel52-1.fna.fbcdn.net/v/t39.30808-6/290855209_519363083315752_8796729469823071593_n.jpg?stp=dst-jpg_p720x720&_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=ho6U8RldIkEAX_gmxDq&_nc_ht=scontent.fdel52-1.fna&oh=00_AT9oVIQqD74QAlTOkrxgFaz-_Q5Kbhe0C3Vp-kjPitougw&oe=62C21203" alt=""/>
+              <p>Collections Photo Album - 12 pages</p>
+            </div>
+            <div class="checkout-more-stuff-content">
+              <img src="https://scontent.fdel52-1.fna.fbcdn.net/v/t39.30808-6/290969736_519363439982383_554843010273733119_n.jpg?stp=dst-jpg_p720x720&_nc_cat=102&ccb=1-7&_nc_sid=730e14&_nc_ohc=CAZOh5aAtFUAX9pVDA6&_nc_ht=scontent.fdel52-1.fna&oh=00_AT9uqCFomHvxfHP1sNPSEhnYeF6VVTApA6gr8pmvpsDKIA&oe=62C118D9" alt=""/>
+              <p>Magnifique Photo Album - 8 pages</p>
+            </div>
+          </div>
+          <div class="checkout-more-stuff-content">
+            <img src="https://scontent.fdel52-1.fna.fbcdn.net/v/t39.30808-6/291068783_519363743315686_8720893493524572526_n.jpg?stp=dst-jpg_p960x960&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=1geuFS8RlHoAX_h16q-&_nc_ht=scontent.fdel52-1.fna&oh=00_AT8GIPVNJEzS53zZoak-oBqYZ8Bwzzsd-D3An2yZUdv57Q&oe=62C05A5D" alt=""/>
+            <p>Awesome Photo Album - 10 pages</p>
+          </div>
+        </div>
+      </div>
+    </div>
+        </>
+
+    )
+}
+
+export default Extra

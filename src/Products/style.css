@@ -1,0 +1,252 @@
+* {
+   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+  }
+  html {    
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  .subtle1 {
+    color: #aaa;
+  }
+
+  .listmain
+  {
+    background: cyan;
+  z-index: +111;
+  }
+  
+  .main-card-container1 {
+
+    background: linear-gradient( cyan ,rgb(28, 28, 252),rgb(181, 0, 252),rgb(255, 73, 164),rgb(255, 156, 172));
+    /* margin-top: 50px; */
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 500px));
+    grid-gap: 50px;
+    justify-content: space-around;
+    padding: 40px;
+  }
+  
+  .card-container1 {
+    border-radius: 10%;
+    margin: 25px auto 0;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-around;
+    align-items: flex-start;
+    box-shadow: 0px -1px 15px 6px rgba(12, 52, 253, 0.2);
+    transition: all 0.1s ease-out;
+  }
+
+  .card-container1:hover
+  {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+  
+  .card-container1 img {
+    max-width: 100%;
+    height: 300px;
+  }
+  
+  .card1 {
+    border-radius: 10%;
+    background-color: #fff;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 0 5px rgba(75, 75, 75, 0.07);
+    z-index: 1;
+  }
+
+  .card1 img
+  {
+    margin: 0 auto;
+    padding-bottom:10px ;
+  }
+  
+  .card-body1 {
+    display: inline-block;
+  }
+  
+  .card-number1 {
+    margin-top: 15px;
+  }
+  
+  .card-circle1 {
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 22px;
+    font-size: 12px;
+    height: 25px;
+    text-align: center;
+    width: 25px;
+  }
+  
+  .card-author1 {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin: 15px 0 0;
+    text-transform: uppercase;
+  }
+  
+  .card-title1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 60px;
+    margin: 10px 0;
+    text-transform: capitalize;
+  }
+  
+  .card-description {
+    /* display: inline-block; */
+    font-weight: 300;
+    line-height: 22px;
+    margin: 10px 0;
+  }
+  
+  .card-read1 {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    margin: 5px 0 20px;
+    position: relative;
+    text-align: right;
+    text-transform: uppercase;
+  }
+  
+  .card-read1:after {
+    background-color: #b8bddd;
+    content: "";
+    display: block;
+    height: 1px;
+    position: absolute;
+    top: 9px;
+    width: 75%;
+  }
+  
+  .card-tag1 {
+    float: right;
+    margin: 5px 0 0;
+    border: 1px solid #aaa;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .card-tag1:hover {
+    background: #aaa;
+    color: black;
+  }
+  
+  .card-media1 {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .card-shadow1 {
+    background-color: #fff;
+    box-shadow: 0 2px 25px 2px rgba(0, 0, 0, 1), 0 2px 50px 2px rgba(0, 0, 0, 1),
+      0 0 100px 3px rgba(0, 0, 0, 0.25);
+    height: 1px;
+    margin: -1px auto 0;
+    width: 80%;
+    z-index: -1;
+  }
+  
+  @media (max-width: 998px) {
+    .main-card-container1 {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(200px, 500px));
+      grid-gap: 50px;
+      justify-content: space-around;
+    }
+  }
+  
+  /* ---------- Button styles ------------------ */
+  
+  .navbar1 {
+    /* background-image: linear-gradient( cyan,rgb(28, 28, 252),rgb(181, 0, 252),rgb(255, 73, 164),rgb(255, 156, 172),); */
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+  
+  .navbar1 h1 {
+    padding-bottom: 20px;
+    text-transform: capitalize;
+  }
+  
+  /** button group styles **/
+  .btn-group1 {
+    border-radius: 1rem;
+    text-transform: capitalize;
+  }
+  .btn-group-item1 {
+    background: #333;
+    color: #fff;
+    border: none;
+    /* min-width: 6rem; */
+    padding: 1.5rem 3rem;
+    /* background-color: rgb(255, 255, 255); */
+    cursor: pointer;
+    /* margin-left:4px; */
+    margin-bottom: 6px;
+    font-size: 17px;
+    border-left: #555 solid 2px;
+    box-shadow: inset 0px 0px 0px -15px rebeccapurple;
+    transition: all 300ms ease-out;
+    text-transform: capitalize;
+  }
+  
+  .btn-group-item1:hover,
+  .btn-group-item1:focus {
+    color: #f7c08a;
+    box-shadow: inset 0px -20px 0px -15px #f7c08a;
+  }
+  .btn-group-item1:focus {
+    outline: none;
+  }
+  .btn-group-item1:after {
+    content: "✔️";
+    margin-left: 0.5rem;
+    display: inline-block;
+    color: #f7c08a;
+    position: absolute;
+    transform: translatey(10px);
+    opacity: 0;
+    transition: all 200ms ease-out;
+  }
+  .btn-group-item1--active:after {
+    opacity: 1;
+    transform: translatey(-2px);
+  }
+  
+
+  .to-make-price-big-in-card
+  {
+    font-size: 20px;
+    color: coral;
+  }
+
+  .mrp-on-card
+  {
+    font-size: 12px;
+  }
